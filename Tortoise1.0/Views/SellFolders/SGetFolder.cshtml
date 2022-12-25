@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Tortoise1._0.Models.SellFolder>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var cid = ViewBag.id;
+}
+@if (Model == null)
+{
+    <div class="alert alert-danger" role="alert">
+        <p>No Record Found for ID = '@cid'.</p>
+    </div>
+    <p>
+        <a class="btn btn-success" asp-action="Create" asp-route-id="@cid">Create Record</a>
+    </p>
+}
+else
+{
+    <h1><code>Records for Folder ID = @cid</code></h1>
+    <p>
+        <a class="btn btn-success" asp-action="Create" asp-route-id="@cid">Create Record</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BillNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CheckNo)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BillNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CheckNo)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
