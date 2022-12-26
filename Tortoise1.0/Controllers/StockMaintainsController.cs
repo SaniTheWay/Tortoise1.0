@@ -53,7 +53,7 @@ namespace Tortoise1._0.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TypeId,Name,Count")] StockMaintain stockMaintain)
+        public async Task<IActionResult> Create([Bind("TypeId,Name,Count")] StockMaintain stockMaintain)
         {
             if (ModelState.IsValid)
             {
