@@ -12,7 +12,8 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tortoise1._0</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="assets/favicon.png" class="img-fluid rounded-circle" width="50px" height="50px" style="margin:auto;"/>  Tortoise</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,7 +24,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="BuyCustomers" asp-action="Index">Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="SellCustomers" asp-action="Index">Sell</a>
                         </li>
                     </ul>
                 </div>
@@ -36,9 +40,13 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Tortoise1._0 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="py-5 bg-black">
+        <div class="container px-5">
+            <p class="m-0 text-center text-white small">
+                Copyright &copy; Tortoise 2022<br />
+                Made with &hearts; Team Tortoise
+                <img src="assets/favicon.png" width="30px" height="30px" stype="border-radius:50%" />
+            </p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

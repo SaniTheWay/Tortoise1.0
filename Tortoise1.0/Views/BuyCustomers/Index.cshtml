@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Tortoise1._0.Models.BuyCustomer>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Buy";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -14,16 +14,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CName)
+                Customer Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CAddress)
+                Address
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CPhone)
+                Phone
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CGstNo)
+                GST Number
             </th>
             <th></th>
         </tr>
